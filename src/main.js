@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import CurrencyExchange from './currency.js'
+import CurrencyExchange from './currencyAPI.js'
 
 function clearFields() {
   $('#dollarAmount').val("");
