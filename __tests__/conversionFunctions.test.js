@@ -12,6 +12,4 @@ describe('ConversionCalulator', () => {
     const canadaDollar = new ConversionCalculator(1, 1.3089);
     expect(canadaDollar.showMeTheMoney()).toEqual("1.31");
   });
-
-
 });
