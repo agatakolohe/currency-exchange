@@ -13,13 +13,19 @@ function getElements(response, inputtedDollar, inputtedCurrencyType) {
   if(response) {
     const conversionRates = Object.entries(response.conversion_rates);
     for (const [country, amount] of conversionRates) {
-      if (inputtedCurrencyType == country) {
+      if (inputtedCurrencyType === country) {
         let usdConversion = (inputtedDollar * amount).toFixed(2);
         $('#showMoney').text(`$ ${inputtedDollar} is ${usdConversion} in ${country}`); 
+        break;
+      } 
+  }
+    const checkCountries = Map.keys(response.conversion_rates);
+    for(const country of checkCountries) {
+      if (inputtedCurrencyType !== country) {
+        $('.noCountry').text(`The currency for ${inputtedCurrencyType} does not exist`);
+        console.log(checkCountries);
+        break;
       }
-    }
-    if (inputtedCurrencyType !== country) {
-      $('.showErrors').text(`${inputtedCurrencyType} does not exist`);
     }
   } else {
       $('.showErrors').text(`There was an error: ${response}`);
@@ -39,6 +45,7 @@ $("#moneyExchange").submit(function(event) {
     let inputtedDollar = parseInt($("input#dollarAmount").val());
     let inputtedCurrencyType = $("input:radio[name=currencyTypes]:checked").val();
     clearFields();
+    console.log(typeof(inputtedCurrencyType));
     makeApiCall(inputtedDollar, inputtedCurrencyType);
   });
 });
