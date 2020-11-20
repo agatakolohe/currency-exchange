@@ -8,6 +8,6 @@ describe('CurrencyResponse', () => {
   });
 
   test('it should correctly return the result message of CurrencyResponse', () => {
-    expect(testCurrency.result).toEqual("fail");
+    expect(testCurrency.result).toEqual("success");
   });
 });
