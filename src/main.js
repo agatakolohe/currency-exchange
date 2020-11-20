@@ -11,22 +11,15 @@ function clearFields() {
 
 function getElements(response, inputtedDollar, inputtedCurrencyType) {
   if(response) {
-    $('#response').text(`$ ${inputtedDollar} in ${inputtedCurrencyType}:`);
-    if (inputtedCurrencyType === "canada") {
-      let convertCa= (inputtedDollar * response.conversion_rates.CAD).toFixed(2);
-      $('#showMoney').text(`${convertCa}`);
-    } else if (inputtedCurrencyType === "euro") {
-      let convertEu = (inputtedDollar * response.conversion_rates.EUR).toFixed(2);
-      $('#showMoney').text(`${convertEu}`);
-    } else if (inputtedCurrencyType === "uk") {
-      let convertUk = (inputtedDollar * response.conversion_rates.GBP).toFixed(2);
-      $('#showMoney').text(`${convertUk}`);
-    } else if (inputtedCurrencyType === "japan") {
-      let convertJp = (inputtedDollar * response.conversion_rates.JPY).toFixed(2);
-      $('#showMoney').text(`${convertJp}`);
-    } else if (inputtedCurrencyType === "poland") {
-      let convertPl = (inputtedDollar * response.conversion_rates.PLN).toFixed(2);
-      $('#showMoney').text(`${convertPl}`);
+    const conversionRates = Object.entries(response.conversion_rates);
+    for (const [country, amount] of conversionRates) {
+      if (inputtedCurrencyType == country) {
+        let usdConversion = (inputtedDollar * amount).toFixed(2);
+        $('#showMoney').text(`$ ${inputtedDollar} is ${usdConversion} in ${country}`); 
+      }
+    }
+    if (inputtedCurrencyType !== country) {
+      $('.showErrors').text(`${inputtedCurrencyType} does not exist`);
     }
   } else {
       $('.showErrors').text(`There was an error: ${response}`);
@@ -49,3 +42,20 @@ $("#moneyExchange").submit(function(event) {
     makeApiCall(inputtedDollar, inputtedCurrencyType);
   });
 });
+
+// if (inputtedCurrencyType === "canada") {
+//   let convertCa= (inputtedDollar * response.conversion_rates.CAD).toFixed(2);
+//   $('#showMoney').text(`${convertCa}`);
+// } else if (inputtedCurrencyType === "euro") {
+//   let convertEu = (inputtedDollar * response.conversion_rates.EUR).toFixed(2);
+//   $('#showMoney').text(`${convertEu}`);
+// } else if (inputtedCurrencyType === "uk") {
+//   let convertUk = (inputtedDollar * response.conversion_rates.GBP).toFixed(2);
+//   $('#showMoney').text(`${convertUk}`);
+// } else if (inputtedCurrencyType === "japan") {
+//   let convertJp = (inputtedDollar * response.conversion_rates.JPY).toFixed(2);
+//   $('#showMoney').text(`${convertJp}`);
+// } else if (inputtedCurrencyType === "poland") {
+//   let convertPl = (inputtedDollar * response.conversion_rates.PLN).toFixed(2);
+//   $('#showMoney').text(`${convertPl}`);
+// }
