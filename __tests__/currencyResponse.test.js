@@ -10,4 +10,7 @@ describe('CurrencyResponse', () => {
   test('it should correctly return the result message of CurrencyResponse', () => {
     expect(testCurrency.result).toEqual("success");
   });
+  test('it should correctly return the conversion rates of CurrencyResponse', () => {
+    expect(testCurrency.conversion_rates).toEqual("success");
+  });
 });
