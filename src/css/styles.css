@@ -1,0 +1,12 @@
+.jumbotron {
+  text-align: center;
+  background-color: #007272;
+}
+body {
+  background: darkcyan;
+  color: white;
+  text-shadow: 5px 5px #007272;
+}
+a {
+  color: #00bebe;
+}
