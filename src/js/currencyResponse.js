@@ -8,13 +8,7 @@ export default class CurrencyResponse {
       this.time_next_update_unix = 1605916926;
       this.time_next_update_utc = "Sat, 21 Nov 2020 00:02:06 +0000";
       this.base_code = "USD";
-      this.conversion_rates = {
-          USD = 1,
-          CAD = 1.3089,
-          EUR = 0.8440,
-          GBP = 0.7552,
-          JPY = 103.9219,
-          PLN = 3.7779
-  }
+      this.conversion_rates = 
+          "USD = 1, CAD = 1.3089, EUR = 0.8440, GBP = 0.7552, JPY = 103.9219, PLN = 3.7779";
   }
 }
