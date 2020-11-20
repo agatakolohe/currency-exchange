@@ -4,6 +4,6 @@ export default class ConversionCalculator {
     this.currency = currency;
   }
   showMeTheMoney() {
-    return this.usd * this.currency;
+    return (this.usd * this.currency).toFixed(2);
   } 
 }
