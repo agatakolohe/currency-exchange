@@ -4,12 +4,44 @@
   <title></title>
 </head>
 <body>
-  <h3>Template!</h3>
-  <form id="">
-    <label for=""></label>
-    <input id="" type="">
+  <h1>Currency Exchanger</h1>
+  <h3>Type in a USD dollar amount and choose wish currency you want it to be converted to.</h3>
+  <form id="moneyExchange">
+    <label for="dollarAmount">Enter the dollar:</label>
+    <input id="dollarAmount" type="number">
+    <div class="radio">
+      <label>
+        <input type="radio" name="currencyTypes" value="canada">
+        Canadian Dollar
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currencyTypes" value="euro">
+        Euro
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currencyTypes" value="uk">
+        Pound Sterling (UK)
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currencyTypes" value="japan">
+        Japanese Yen
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currencyTypes" value="poland">
+        Polish Zloty
+      </label>
+    </div>
     <button type="submit" class="btn btn-outline-light">Submit</button>
   </form>
-  <ul id="response"></ul>
+  <div id="response"></div>
+  <div id="showMoney"></div>
 </body>
 </html>

@@ -13,11 +13,11 @@ Purpose usage, detailed explanation what is does and any other information you w
 <details>
   <summary>Expand Specs</summary>
 
-### Describe: functionName()
+### Describe: CurrencyResponse()
 
 | Test | Expect |
 | ---- | ------ |
-
+| It should correctly create CurrencyResponse object | CurrencyResponse().toEqual("success"); |
 </details>
 
 ## Setup/Installation Requirements
