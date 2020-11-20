@@ -1,5 +1,3 @@
-import { NoEmitOnErrorsPlugin } from "webpack";
-
 export default class CurrencyExchange {
   static async getConversion() {
     try {
