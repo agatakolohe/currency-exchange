@@ -19,6 +19,7 @@ Purpose usage, detailed explanation what is does and any other information you w
 | ---- | ------ |
 | It should correctly create CurrencyResponse object | CurrencyResponse().toEqual("success"); |
 | It should correctly return conversion rates of CurrencyResponse object | CurrencyResponse.conversion_rates.toEqual("USD": 1, "CAD": 1.3089, "EUR": 0.8440, "GBP": 0.7552, "JPY": 103.9219, "PLN": 3.7779); |
+| It should correctly return specific conversion rates | CurrencyResponse.conversion_rates.CAD.toEqual(1.3089) |
 </details>
 
 ## Setup/Installation Requirements
