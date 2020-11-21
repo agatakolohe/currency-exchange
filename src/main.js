@@ -4,15 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyExchange from './currencyAPI.js';
 
-
 function clearFields() {
   $('#dollarAmount').val("");
 }
 
 function getElements(response, inputtedDollar, inputtedCurrencyType) {
   if(response) {
-    const conversionRates = Object.entries(response.conversion_rates);
-    for (const [country, amount] of conversionRates) {
+    const conversionRates = Object.entries(response.conversion_rates); ///turns it into an array, change to keys and values
+    for (const [country, amount] of conversionRates) { //change amount name here and in readme
       if (inputtedCurrencyType === country) {
         let usdConversion = (inputtedDollar * amount).toFixed(2);
         $('#response').text(`$ ${inputtedDollar} is ${usdConversion} in ${country}`); 
