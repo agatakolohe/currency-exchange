@@ -10,8 +10,8 @@ function clearFields() {
 
 function getElements(response, inputtedDollar, inputtedCurrencyType) {
   if(response) {
-    const conversionRates = Object.entries(response.conversion_rates); ///turns it into an array, change to keys and values
-    for (const [country, amount] of conversionRates) { //change amount name here and in readme
+    const conversionRates = Object.entries(response.conversion_rates); 
+    for (const [country, amount] of conversionRates) {
       if (inputtedCurrencyType === country) {
         let usdConversion = (inputtedDollar * amount).toFixed(2);
         $('#response').text(`$ ${inputtedDollar} is ${usdConversion} in ${country}`); 
