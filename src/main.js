@@ -25,7 +25,9 @@ function getElements(response, inputtedDollar, inputtedCurrencyType) {
       }
     }
   } else {
-    $(".showErrors").text(`There was an ExchangeRate API error: ${response["error-type"]}`);
+    $(".showErrors").text(
+      `There was an ExchangeRate API error: ${response["error-type"]}`
+    );
   }
 }
 
