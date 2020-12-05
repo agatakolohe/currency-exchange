@@ -1,4 +1,4 @@
-import CurrencyResponse from './../src/js/currencyResponse.js'
+import CurrencyResponse from './currencyResponse.js'
 
 describe('CurrencyResponse', () => {
   let testCurrency;

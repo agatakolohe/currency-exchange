@@ -10,3 +10,16 @@ body {
 a {
   color: #00bebe;
 }
+#dollarAmount {
+  margin: 20px;
+}
+button {
+  margin-top: 20px;
+}
+#response {
+  margin-top: 20px;
+  font-size: x-large;
+  color: #80dfb0;
+  text-shadow: 5px 5px #008e47;
+  font-weight: 600;
+}

@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <title></title>
-</head>
-<body>
-  <h1>Currency Exchanger</h1>
-  <h3>Type in a USD dollar amount and choose wish currency you want it to be converted to.</h3>
-  <form id="moneyExchange">
-    <label for="dollarAmount">Enter the dollar amount:</label>
-    <input id="dollarAmount" type="number">
-    <div class="radio">
-      <label>
-        <input type="radio" name="currencyTypes" value="CAD">
-        Canadian Dollar
-      </label>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Currency Exchanger</h1>
+      <h3>
+        Type in a USD dollar amount and choose wish currency you want it to be
+        converted to.
+      </h3>
+      <form id="moneyExchange">
+        <label for="dollarAmount">Enter the dollar amount:</label>
+        <input id="dollarAmount" type="number" required />
+        <div class="radio">
+          <label>
+            <input type="radio" name="currencyTypes" value="CAD" />
+            Canadian Dollar
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="currencyTypes" value="EUR" />
+            Euro
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="currencyTypes" value="GBP" />
+            Pound Sterling (UK)
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="currencyTypes" value="JPY" />
+            Japanese Yen
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="currencyTypes" value="PLN" />
+            Polish Zloty
+          </label>
+        </div>
+        <button type="submit" class="btn btn-outline-light">Submit</button>
+      </form>
+      <div id="response"></div>
+      <div class="showErrors"></div>
+      <div class="noCountry"></div>
     </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currencyTypes" value="EUR">
-        Euro
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currencyTypes" value="GBP">
-        Pound Sterling (UK)
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currencyTypes" value="JPY">
-        Japanese Yen
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="currencyTypes" value="PLN">
-        Polish Zloty
-      </label>
-    </div>
-    <button type="submit" class="btn btn-outline-light">Submit</button>
-  </form>
-  <div id="response"></div>
-  <div class="showErrors"></div>
-  <div class="noCountry"></div>
-</body>
+  </body>
 </html>

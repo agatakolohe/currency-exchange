@@ -83,9 +83,14 @@ Sixth independent project for Epicodus to demonstrate my understanding of API ca
 - Click on the green "Code" button and copy the repository URL
 - Open your terminal and use the command `git clone REPO URL HERE` into the directory you would like to clone the repository
 - Open in text editor to view code and make changes
+
 - To install all necessary packages for the project to function:
   - Open terminal and navigate to the project directory.
-  - Run the command `npm run install` 
+  - Run the command `npm install` 
+- To bundle/build project
+  - Run the command `npm run build`
+- To build and view in browser 
+  - Run the command `npm start`
 
 
 <details>
